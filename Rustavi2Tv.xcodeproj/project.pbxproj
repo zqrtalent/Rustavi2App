@@ -1,0 +1,1142 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA02AFFF21CFBEBE0039CBFF /* NewsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02AFFE21CFBEBE0039CBFF /* NewsTableViewDataSource.swift */; };
+		BA041CCC219CB4C2000A5687 /* ShowsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA041CCB219CB4C2000A5687 /* ShowsCollectionViewController.swift */; };
+		BA041CCE219CC99D000A5687 /* ShowsWebScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA041CCD219CC99D000A5687 /* ShowsWebScraper.swift */; };
+		BA041CD0219CCB71000A5687 /* ShowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA041CCF219CCB71000A5687 /* ShowItem.swift */; };
+		BA041CD2219CCDF3000A5687 /* HTMLParserUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA041CD1219CCDF3000A5687 /* HTMLParserUtility.swift */; };
+		BA05615421ADDB4A00FE398F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05615321ADDB4A00FE398F /* DateExtension.swift */; };
+		BA05615621ADDE3700FE398F /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05615521ADDE3700FE398F /* DateExtensionTests.swift */; };
+		BA0B228A219F5BA800BA3565 /* Rustavi2Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA0B2288219F5BA800BA3565 /* Rustavi2Data.xcdatamodeld */; };
+		BA15E5D021A89BCE00CDAD36 /* ShowDetailWebScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA15E5CF21A89BCE00CDAD36 /* ShowDetailWebScraper.swift */; };
+		BA15E5D221A89CCE00CDAD36 /* ShowVideoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA15E5D121A89CCE00CDAD36 /* ShowVideoItem.swift */; };
+		BA15E5D421A89D7800CDAD36 /* ShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA15E5D321A89D7800CDAD36 /* ShowDetail.swift */; };
+		BA455717219223C500C6085B /* Rustavi2TvShared.h in Headers */ = {isa = PBXBuildFile; fileRef = BA455715219223C500C6085B /* Rustavi2TvShared.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA45571A219223C500C6085B /* Rustavi2TvShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA455713219223C500C6085B /* Rustavi2TvShared.framework */; };
+		BA45571B219223C500C6085B /* Rustavi2TvShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA455713219223C500C6085B /* Rustavi2TvShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA45571F219223D900C6085B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADF05ED2185F1F300031E78 /* Settings.swift */; };
+		BA45572021922CE400C6085B /* NewsDetailWebScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4556FE2192205400C6085B /* NewsDetailWebScraper.swift */; };
+		BA45572121922CE700C6085B /* NewsVideoUrlWebScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4556FC2192205400C6085B /* NewsVideoUrlWebScraper.swift */; };
+		BA45572221922CEB00C6085B /* NewsWebScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4556FB2192205400C6085B /* NewsWebScraper.swift */; };
+		BA45572321922CEE00C6085B /* WebScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4556FD2192205400C6085B /* WebScraper.swift */; };
+		BA45572421922D0300C6085B /* HLSVideoPlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA455709219220C800C6085B /* HLSVideoPlayerHelper.swift */; };
+		BA45572521922D0700C6085B /* NewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4557042192209400C6085B /* NewsDetail.swift */; };
+		BA45572621922D4000C6085B /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4557052192209400C6085B /* NewsItem.swift */; };
+		BA4557272192302B00C6085B /* HTMLParserLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4556F72192204600C6085B /* HTMLParserLite.swift */; };
+		BA4557282192302F00C6085B /* HTMLElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4556F82192204600C6085B /* HTMLElem.swift */; };
+		BA499592217E601000978748 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA499591217E601000978748 /* NewsTableViewController.swift */; };
+		BA499594217E674900978748 /* NewsItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA499593217E674900978748 /* NewsItemTableViewCell.swift */; };
+		BA5E1BF521937F1300C40101 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5E1BF421937F1300C40101 /* TodayViewController.swift */; };
+		BA5E1BF821937F1300C40101 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5E1BF621937F1300C40101 /* MainInterface.storyboard */; };
+		BA5E1BFC21937F1300C40101 /* Rustavi2TvWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BA5E1BF021937F1200C40101 /* Rustavi2TvWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BA5E1C022193862D00C40101 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5E1C012193862D00C40101 /* Foundation.framework */; };
+		BA6A0DBC21D7FA9200FE47EB /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6A0DBB21D7FA9200FE47EB /* UIImageExtension.swift */; };
+		BA6DD4C921CE528C00977524 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5E1BF121937F1300C40101 /* NotificationCenter.framework */; };
+		BA6DD4CB21CE698C00977524 /* NewsArchiveWebScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6DD4CA21CE698C00977524 /* NewsArchiveWebScraper.swift */; };
+		BA7C22BB21A1989200B00696 /* NewsImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7C22BA21A1989200B00696 /* NewsImageStorage.swift */; };
+		BA7C22BD21A1AB0C00B00696 /* ImageFileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7C22BC21A1AB0C00B00696 /* ImageFileStorage.swift */; };
+		BA7C22BF21A1ABF300B00696 /* ShowsImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7C22BE21A1ABF300B00696 /* ShowsImageStorage.swift */; };
+		BA7E9B0421E28B4A002FCFE2 /* CollectionViewCellUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7E9B0321E28B4A002FCFE2 /* CollectionViewCellUpdater.swift */; };
+		BA8DD53021A021EA009FBF83 /* DataAccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8DD52F21A021EA009FBF83 /* DataAccessController.swift */; };
+		BA8DD53221A02229009FBF83 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8DD53121A02229009FBF83 /* CoreData.framework */; };
+		BA8DD53521A0B55D009FBF83 /* NewsItemMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8DD53421A0B55D009FBF83 /* NewsItemMO.swift */; };
+		BA8DD53721A0B8FE009FBF83 /* NewsDetailMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8DD53621A0B8FE009FBF83 /* NewsDetailMO.swift */; };
+		BA8DD53921A0B92D009FBF83 /* ShowItemMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8DD53821A0B92D009FBF83 /* ShowItemMO.swift */; };
+		BA8DD53C21A0BF2C009FBF83 /* LocalFileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8DD53B21A0BF2C009FBF83 /* LocalFileStorage.swift */; };
+		BA9527F821C05CC200B27D52 /* ShowVideoSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9527F721C05CC200B27D52 /* ShowVideoSectionCell.swift */; };
+		BA9527FA21C05D6800B27D52 /* ShowVideoSectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9527F921C05D6800B27D52 /* ShowVideoSectionTableCell.swift */; };
+		BAA42808219E063000EAD9A7 /* ShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA42807219E063000EAD9A7 /* ShowCollectionViewCell.swift */; };
+		BAA4D9E221AB0011008F00F8 /* Rustavi2DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA4D9E121AB0011008F00F8 /* Rustavi2DataController.swift */; };
+		BAB15AE421B3F2D000ECB45B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB15AE321B3F2D000ECB45B /* UIKit.framework */; };
+		BAB15AE621B4235500ECB45B /* HTMLParserUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB15AE521B4235500ECB45B /* HTMLParserUtilityTests.swift */; };
+		BAB2B2D021C9810F00CBA5CC /* ShowVideoImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB2B2CF21C9810F00CBA5CC /* ShowVideoImageStorage.swift */; };
+		BAB2B2D221C99BC500CBA5CC /* ShowVideoWebScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB2B2D121C99BC500CBA5CC /* ShowVideoWebScraper.swift */; };
+		BAB2B2D421C99C4E00CBA5CC /* ShowVideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB2B2D321C99C4E00CBA5CC /* ShowVideoInfo.swift */; };
+		BAB642212175099300993E22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB642202175099300993E22 /* AppDelegate.swift */; };
+		BAB642262175099300993E22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB642242175099300993E22 /* Main.storyboard */; };
+		BAB6422B2175099500993E22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB6422A2175099500993E22 /* Assets.xcassets */; };
+		BAB6422E2175099500993E22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB6422C2175099500993E22 /* LaunchScreen.storyboard */; };
+		BAB642392175099500993E22 /* Rustavi2TvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB642382175099500993E22 /* Rustavi2TvTests.swift */; };
+		BAB64245217509BC00993E22 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB64244217509BC00993E22 /* AVKit.framework */; };
+		BAB64247217509C300993E22 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB64246217509C300993E22 /* AVFoundation.framework */; };
+		BAB6C5AA2183B8EC00CC7D46 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6C5A92183B8EC00CC7D46 /* NewsDetailViewController.swift */; };
+		BAC339A621B9BC4A007F6667 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC339A521B9BC4A007F6667 /* StringExtension.swift */; };
+		BAC339A821B9C04B007F6667 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC339A721B9C04B007F6667 /* StringExtensionTests.swift */; };
+		BAC3C89821C84EB80042889B /* ShowVideosColectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3C89721C84EB80042889B /* ShowVideosColectionView.swift */; };
+		BAD7D9C2217930B000D93F74 /* HTMLParserLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7D9BF2179074400D93F74 /* HTMLParserLiteTests.swift */; };
+		BAF0D91421C6DA2200EC0481 /* ShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF0D91321C6DA2200EC0481 /* ShowTableViewController.swift */; };
+		BAF0D91721C6E15300EC0481 /* ShowMainVideoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF0D91621C6E15300EC0481 /* ShowMainVideoTableCell.swift */; };
+		BAF1310821A97ADD00808DDD /* Rustavi2TvShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA455713219223C500C6085B /* Rustavi2TvShared.framework */; };
+		BAF44CBF2198538700FF62A4 /* StretchyLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF44CBE2198538700FF62A4 /* StretchyLayoutViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA455718219223C500C6085B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAB642152175099300993E22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA455712219223C500C6085B;
+			remoteInfo = Rustavi2TvShared;
+		};
+		BA5E1BFA21937F1300C40101 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAB642152175099300993E22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA5E1BEF21937F1200C40101;
+			remoteInfo = Rustavi2TvWidget;
+		};
+		BAB642352175099500993E22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAB642152175099300993E22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAB6421C2175099300993E22;
+			remoteInfo = Rustavi2Tv;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BA4556F321921B3C00C6085B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BA45571B219223C500C6085B /* Rustavi2TvShared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5E1C0021937F1300C40101 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BA5E1BFC21937F1300C40101 /* Rustavi2TvWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BA02AFFE21CFBEBE0039CBFF /* NewsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewDataSource.swift; sourceTree = "<group>"; };
+		BA041CCB219CB4C2000A5687 /* ShowsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsCollectionViewController.swift; sourceTree = "<group>"; };
+		BA041CCD219CC99D000A5687 /* ShowsWebScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsWebScraper.swift; sourceTree = "<group>"; };
+		BA041CCF219CCB71000A5687 /* ShowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowItem.swift; sourceTree = "<group>"; };
+		BA041CD1219CCDF3000A5687 /* HTMLParserUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParserUtility.swift; sourceTree = "<group>"; };
+		BA05615321ADDB4A00FE398F /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		BA05615521ADDE3700FE398F /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
+		BA0B2289219F5BA800BA3565 /* Rustavi2Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rustavi2Data.xcdatamodel; sourceTree = "<group>"; };
+		BA15E5CF21A89BCE00CDAD36 /* ShowDetailWebScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailWebScraper.swift; sourceTree = "<group>"; };
+		BA15E5D121A89CCE00CDAD36 /* ShowVideoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVideoItem.swift; sourceTree = "<group>"; };
+		BA15E5D321A89D7800CDAD36 /* ShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetail.swift; sourceTree = "<group>"; };
+		BA4556F72192204600C6085B /* HTMLParserLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLParserLite.swift; sourceTree = "<group>"; };
+		BA4556F82192204600C6085B /* HTMLElem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLElem.swift; sourceTree = "<group>"; };
+		BA4556FB2192205400C6085B /* NewsWebScraper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsWebScraper.swift; sourceTree = "<group>"; };
+		BA4556FC2192205400C6085B /* NewsVideoUrlWebScraper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVideoUrlWebScraper.swift; sourceTree = "<group>"; };
+		BA4556FD2192205400C6085B /* WebScraper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebScraper.swift; sourceTree = "<group>"; };
+		BA4556FE2192205400C6085B /* NewsDetailWebScraper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailWebScraper.swift; sourceTree = "<group>"; };
+		BA4557042192209400C6085B /* NewsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetail.swift; sourceTree = "<group>"; };
+		BA4557052192209400C6085B /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		BA455709219220C800C6085B /* HLSVideoPlayerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLSVideoPlayerHelper.swift; sourceTree = "<group>"; };
+		BA455713219223C500C6085B /* Rustavi2TvShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rustavi2TvShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA455715219223C500C6085B /* Rustavi2TvShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rustavi2TvShared.h; sourceTree = "<group>"; };
+		BA455716219223C500C6085B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA499591217E601000978748 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		BA499593217E674900978748 /* NewsItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemTableViewCell.swift; sourceTree = "<group>"; };
+		BA5E1BF021937F1200C40101 /* Rustavi2TvWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Rustavi2TvWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5E1BF121937F1300C40101 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		BA5E1BF421937F1300C40101 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		BA5E1BF721937F1300C40101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		BA5E1BF921937F1300C40101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA5E1C012193862D00C40101 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BA6A0DBB21D7FA9200FE47EB /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		BA6DD4CA21CE698C00977524 /* NewsArchiveWebScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArchiveWebScraper.swift; sourceTree = "<group>"; };
+		BA7C22BA21A1989200B00696 /* NewsImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsImageStorage.swift; sourceTree = "<group>"; };
+		BA7C22BC21A1AB0C00B00696 /* ImageFileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileStorage.swift; sourceTree = "<group>"; };
+		BA7C22BE21A1ABF300B00696 /* ShowsImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsImageStorage.swift; sourceTree = "<group>"; };
+		BA7E9B0321E28B4A002FCFE2 /* CollectionViewCellUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellUpdater.swift; sourceTree = "<group>"; };
+		BA8DD52F21A021EA009FBF83 /* DataAccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessController.swift; sourceTree = "<group>"; };
+		BA8DD53121A02229009FBF83 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BA8DD53421A0B55D009FBF83 /* NewsItemMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemMO.swift; sourceTree = "<group>"; };
+		BA8DD53621A0B8FE009FBF83 /* NewsDetailMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailMO.swift; sourceTree = "<group>"; };
+		BA8DD53821A0B92D009FBF83 /* ShowItemMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowItemMO.swift; sourceTree = "<group>"; };
+		BA8DD53B21A0BF2C009FBF83 /* LocalFileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileStorage.swift; sourceTree = "<group>"; };
+		BA9527F721C05CC200B27D52 /* ShowVideoSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVideoSectionCell.swift; sourceTree = "<group>"; };
+		BA9527F921C05D6800B27D52 /* ShowVideoSectionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVideoSectionTableCell.swift; sourceTree = "<group>"; };
+		BA9DFD9021A2044200FB3BA5 /* Rustavi2Tv.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rustavi2Tv.entitlements; sourceTree = "<group>"; };
+		BA9DFD9121A2046300FB3BA5 /* Rustavi2TvWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rustavi2TvWidget.entitlements; sourceTree = "<group>"; };
+		BAA42807219E063000EAD9A7 /* ShowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCollectionViewCell.swift; sourceTree = "<group>"; };
+		BAA4D9E121AB0011008F00F8 /* Rustavi2DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rustavi2DataController.swift; sourceTree = "<group>"; };
+		BAB15AE321B3F2D000ECB45B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BAB15AE521B4235500ECB45B /* HTMLParserUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParserUtilityTests.swift; sourceTree = "<group>"; };
+		BAB2B2CF21C9810F00CBA5CC /* ShowVideoImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVideoImageStorage.swift; sourceTree = "<group>"; };
+		BAB2B2D121C99BC500CBA5CC /* ShowVideoWebScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVideoWebScraper.swift; sourceTree = "<group>"; };
+		BAB2B2D321C99C4E00CBA5CC /* ShowVideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVideoInfo.swift; sourceTree = "<group>"; };
+		BAB6421D2175099300993E22 /* Rustavi2Tv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rustavi2Tv.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAB642202175099300993E22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BAB642252175099300993E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAB6422A2175099500993E22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAB6422D2175099500993E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAB6422F2175099500993E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAB642342175099500993E22 /* Rustavi2TvTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rustavi2TvTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAB642382175099500993E22 /* Rustavi2TvTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rustavi2TvTests.swift; sourceTree = "<group>"; };
+		BAB6423A2175099500993E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAB64244217509BC00993E22 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		BAB64246217509C300993E22 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BAB6C5A92183B8EC00CC7D46 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		BAC339A521B9BC4A007F6667 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		BAC339A721B9C04B007F6667 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		BAC3C89721C84EB80042889B /* ShowVideosColectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVideosColectionView.swift; sourceTree = "<group>"; };
+		BAD7D9BF2179074400D93F74 /* HTMLParserLiteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParserLiteTests.swift; sourceTree = "<group>"; };
+		BADF05ED2185F1F300031E78 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		BAF0D91321C6DA2200EC0481 /* ShowTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewController.swift; sourceTree = "<group>"; };
+		BAF0D91621C6E15300EC0481 /* ShowMainVideoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMainVideoTableCell.swift; sourceTree = "<group>"; };
+		BAF44CBE2198538700FF62A4 /* StretchyLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyLayoutViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA455710219223C500C6085B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB15AE421B3F2D000ECB45B /* UIKit.framework in Frameworks */,
+				BA8DD53221A02229009FBF83 /* CoreData.framework in Frameworks */,
+				BA5E1C022193862D00C40101 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5E1BED21937F1200C40101 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA6DD4C921CE528C00977524 /* NotificationCenter.framework in Frameworks */,
+				BAF1310821A97ADD00808DDD /* Rustavi2TvShared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAB6421A2175099300993E22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB64247217509C300993E22 /* AVFoundation.framework in Frameworks */,
+				BAB64245217509BC00993E22 /* AVKit.framework in Frameworks */,
+				BA45571A219223C500C6085B /* Rustavi2TvShared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAB642312175099500993E22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA0B2287219F506700BA3565 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				BA8DD53321A07E91009FBF83 /* Entities */,
+				BA0B2288219F5BA800BA3565 /* Rustavi2Data.xcdatamodeld */,
+				BA8DD52F21A021EA009FBF83 /* DataAccessController.swift */,
+				BAA4D9E121AB0011008F00F8 /* Rustavi2DataController.swift */,
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		BA4556F421921F9B00C6085B /* WebScrapers */ = {
+			isa = PBXGroup;
+			children = (
+				BA4556F521921FB100C6085B /* HTMLParser */,
+				BA4556FE2192205400C6085B /* NewsDetailWebScraper.swift */,
+				BA4556FC2192205400C6085B /* NewsVideoUrlWebScraper.swift */,
+				BA4556FB2192205400C6085B /* NewsWebScraper.swift */,
+				BA4556FD2192205400C6085B /* WebScraper.swift */,
+				BA041CCD219CC99D000A5687 /* ShowsWebScraper.swift */,
+				BA15E5CF21A89BCE00CDAD36 /* ShowDetailWebScraper.swift */,
+				BAB2B2D121C99BC500CBA5CC /* ShowVideoWebScraper.swift */,
+				BA6DD4CA21CE698C00977524 /* NewsArchiveWebScraper.swift */,
+			);
+			path = WebScrapers;
+			sourceTree = "<group>";
+		};
+		BA4556F521921FB100C6085B /* HTMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				BA4556F82192204600C6085B /* HTMLElem.swift */,
+				BA4556F72192204600C6085B /* HTMLParserLite.swift */,
+				BA041CD1219CCDF3000A5687 /* HTMLParserUtility.swift */,
+			);
+			path = HTMLParser;
+			sourceTree = "<group>";
+		};
+		BA4557032192207900C6085B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA4557042192209400C6085B /* NewsDetail.swift */,
+				BA4557052192209400C6085B /* NewsItem.swift */,
+				BA041CCF219CCB71000A5687 /* ShowItem.swift */,
+				BA15E5D121A89CCE00CDAD36 /* ShowVideoItem.swift */,
+				BA15E5D321A89D7800CDAD36 /* ShowDetail.swift */,
+				BAB2B2D321C99C4E00CBA5CC /* ShowVideoInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA455708219220AE00C6085B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BA455709219220C800C6085B /* HLSVideoPlayerHelper.swift */,
+				BA05615321ADDB4A00FE398F /* DateExtension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		BA455714219223C500C6085B /* Rustavi2TvShared */ = {
+			isa = PBXGroup;
+			children = (
+				BAC339A421B9BC2D007F6667 /* Extensions */,
+				BA8DD53A21A0BEF9009FBF83 /* FileStorage */,
+				BA0B2287219F506700BA3565 /* DataAccess */,
+				BA4556F421921F9B00C6085B /* WebScrapers */,
+				BA455708219220AE00C6085B /* Helper */,
+				BA4557032192207900C6085B /* Model */,
+				BADF05ED2185F1F300031E78 /* Settings.swift */,
+				BA455715219223C500C6085B /* Rustavi2TvShared.h */,
+				BA455716219223C500C6085B /* Info.plist */,
+			);
+			path = Rustavi2TvShared;
+			sourceTree = "<group>";
+		};
+		BA5E1BF321937F1300C40101 /* Rustavi2TvWidget */ = {
+			isa = PBXGroup;
+			children = (
+				BA9DFD9121A2046300FB3BA5 /* Rustavi2TvWidget.entitlements */,
+				BA5E1BF421937F1300C40101 /* TodayViewController.swift */,
+				BA5E1BF621937F1300C40101 /* MainInterface.storyboard */,
+				BA5E1BF921937F1300C40101 /* Info.plist */,
+			);
+			path = Rustavi2TvWidget;
+			sourceTree = "<group>";
+		};
+		BA8DD53321A07E91009FBF83 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BA8DD53421A0B55D009FBF83 /* NewsItemMO.swift */,
+				BA8DD53621A0B8FE009FBF83 /* NewsDetailMO.swift */,
+				BA8DD53821A0B92D009FBF83 /* ShowItemMO.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BA8DD53A21A0BEF9009FBF83 /* FileStorage */ = {
+			isa = PBXGroup;
+			children = (
+				BA8DD53B21A0BF2C009FBF83 /* LocalFileStorage.swift */,
+				BA7C22BA21A1989200B00696 /* NewsImageStorage.swift */,
+				BA7C22BC21A1AB0C00B00696 /* ImageFileStorage.swift */,
+				BA7C22BE21A1ABF300B00696 /* ShowsImageStorage.swift */,
+				BAB2B2CF21C9810F00CBA5CC /* ShowVideoImageStorage.swift */,
+			);
+			path = FileStorage;
+			sourceTree = "<group>";
+		};
+		BAA42809219E158900EAD9A7 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				BA499591217E601000978748 /* NewsTableViewController.swift */,
+				BA499593217E674900978748 /* NewsItemTableViewCell.swift */,
+				BAB6C5A92183B8EC00CC7D46 /* NewsDetailViewController.swift */,
+				BAF44CBE2198538700FF62A4 /* StretchyLayoutViewController.swift */,
+				BA02AFFE21CFBEBE0039CBFF /* NewsTableViewDataSource.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		BAA4280A219E159300EAD9A7 /* Shows */ = {
+			isa = PBXGroup;
+			children = (
+				BAA42807219E063000EAD9A7 /* ShowCollectionViewCell.swift */,
+				BA9527F721C05CC200B27D52 /* ShowVideoSectionCell.swift */,
+				BA9527F921C05D6800B27D52 /* ShowVideoSectionTableCell.swift */,
+				BAF0D91621C6E15300EC0481 /* ShowMainVideoTableCell.swift */,
+				BA041CCB219CB4C2000A5687 /* ShowsCollectionViewController.swift */,
+				BAF0D91321C6DA2200EC0481 /* ShowTableViewController.swift */,
+				BAC3C89721C84EB80042889B /* ShowVideosColectionView.swift */,
+				BA7E9B0321E28B4A002FCFE2 /* CollectionViewCellUpdater.swift */,
+			);
+			path = Shows;
+			sourceTree = "<group>";
+		};
+		BAB642142175099300993E22 = {
+			isa = PBXGroup;
+			children = (
+				BAB6421F2175099300993E22 /* Rustavi2Tv */,
+				BAB642372175099500993E22 /* Rustavi2TvTests */,
+				BA455714219223C500C6085B /* Rustavi2TvShared */,
+				BA5E1BF321937F1300C40101 /* Rustavi2TvWidget */,
+				BAB6421E2175099300993E22 /* Products */,
+				BAB64243217509BC00993E22 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BAB6421E2175099300993E22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAB6421D2175099300993E22 /* Rustavi2Tv.app */,
+				BAB642342175099500993E22 /* Rustavi2TvTests.xctest */,
+				BA455713219223C500C6085B /* Rustavi2TvShared.framework */,
+				BA5E1BF021937F1200C40101 /* Rustavi2TvWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAB6421F2175099300993E22 /* Rustavi2Tv */ = {
+			isa = PBXGroup;
+			children = (
+				BA9DFD9021A2044200FB3BA5 /* Rustavi2Tv.entitlements */,
+				BAA4280A219E159300EAD9A7 /* Shows */,
+				BAA42809219E158900EAD9A7 /* News */,
+				BAB642202175099300993E22 /* AppDelegate.swift */,
+				BAB642242175099300993E22 /* Main.storyboard */,
+				BAB6422A2175099500993E22 /* Assets.xcassets */,
+				BAB6422C2175099500993E22 /* LaunchScreen.storyboard */,
+				BAB6422F2175099500993E22 /* Info.plist */,
+			);
+			path = Rustavi2Tv;
+			sourceTree = "<group>";
+		};
+		BAB642372175099500993E22 /* Rustavi2TvTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAB642382175099500993E22 /* Rustavi2TvTests.swift */,
+				BAB6423A2175099500993E22 /* Info.plist */,
+				BAD7D9BF2179074400D93F74 /* HTMLParserLiteTests.swift */,
+				BA05615521ADDE3700FE398F /* DateExtensionTests.swift */,
+				BAB15AE521B4235500ECB45B /* HTMLParserUtilityTests.swift */,
+				BAC339A721B9C04B007F6667 /* StringExtensionTests.swift */,
+			);
+			path = Rustavi2TvTests;
+			sourceTree = "<group>";
+		};
+		BAB64243217509BC00993E22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAB15AE321B3F2D000ECB45B /* UIKit.framework */,
+				BA8DD53121A02229009FBF83 /* CoreData.framework */,
+				BA5E1C012193862D00C40101 /* Foundation.framework */,
+				BAB64246217509C300993E22 /* AVFoundation.framework */,
+				BAB64244217509BC00993E22 /* AVKit.framework */,
+				BA5E1BF121937F1300C40101 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAC339A421B9BC2D007F6667 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BAC339A521B9BC4A007F6667 /* StringExtension.swift */,
+				BA6A0DBB21D7FA9200FE47EB /* UIImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BA45570E219223C500C6085B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA455717219223C500C6085B /* Rustavi2TvShared.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BA455712219223C500C6085B /* Rustavi2TvShared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA45571C219223C500C6085B /* Build configuration list for PBXNativeTarget "Rustavi2TvShared" */;
+			buildPhases = (
+				BA45570E219223C500C6085B /* Headers */,
+				BA45570F219223C500C6085B /* Sources */,
+				BA455710219223C500C6085B /* Frameworks */,
+				BA455711219223C500C6085B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rustavi2TvShared;
+			productName = Rustavi2TvShared;
+			productReference = BA455713219223C500C6085B /* Rustavi2TvShared.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BA5E1BEF21937F1200C40101 /* Rustavi2TvWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA5E1BFF21937F1300C40101 /* Build configuration list for PBXNativeTarget "Rustavi2TvWidget" */;
+			buildPhases = (
+				BA5E1BEC21937F1200C40101 /* Sources */,
+				BA5E1BED21937F1200C40101 /* Frameworks */,
+				BA5E1BEE21937F1200C40101 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rustavi2TvWidget;
+			productName = Rustavi2TvWidget;
+			productReference = BA5E1BF021937F1200C40101 /* Rustavi2TvWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		BAB6421C2175099300993E22 /* Rustavi2Tv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAB6423D2175099500993E22 /* Build configuration list for PBXNativeTarget "Rustavi2Tv" */;
+			buildPhases = (
+				BAB642192175099300993E22 /* Sources */,
+				BAB6421A2175099300993E22 /* Frameworks */,
+				BAB6421B2175099300993E22 /* Resources */,
+				BA4556F321921B3C00C6085B /* Embed Frameworks */,
+				BA5E1C0021937F1300C40101 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA455719219223C500C6085B /* PBXTargetDependency */,
+				BA5E1BFB21937F1300C40101 /* PBXTargetDependency */,
+			);
+			name = Rustavi2Tv;
+			productName = Rustavi2Tv;
+			productReference = BAB6421D2175099300993E22 /* Rustavi2Tv.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAB642332175099500993E22 /* Rustavi2TvTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAB642402175099500993E22 /* Build configuration list for PBXNativeTarget "Rustavi2TvTests" */;
+			buildPhases = (
+				BAB642302175099500993E22 /* Sources */,
+				BAB642312175099500993E22 /* Frameworks */,
+				BAB642322175099500993E22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAB642362175099500993E22 /* PBXTargetDependency */,
+			);
+			name = Rustavi2TvTests;
+			productName = Rustavi2TvTests;
+			productReference = BAB642342175099500993E22 /* Rustavi2TvTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAB642152175099300993E22 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Zakaria Butskhrikidze";
+				TargetAttributes = {
+					BA455712219223C500C6085B = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					BA5E1BEF21937F1200C40101 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					BAB6421C2175099300993E22 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
+					BAB642332175099500993E22 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = BAB6421C2175099300993E22;
+					};
+				};
+			};
+			buildConfigurationList = BAB642182175099300993E22 /* Build configuration list for PBXProject "Rustavi2Tv" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAB642142175099300993E22;
+			productRefGroup = BAB6421E2175099300993E22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAB6421C2175099300993E22 /* Rustavi2Tv */,
+				BAB642332175099500993E22 /* Rustavi2TvTests */,
+				BA455712219223C500C6085B /* Rustavi2TvShared */,
+				BA5E1BEF21937F1200C40101 /* Rustavi2TvWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA455711219223C500C6085B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5E1BEE21937F1200C40101 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA5E1BF821937F1300C40101 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAB6421B2175099300993E22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB6422E2175099500993E22 /* LaunchScreen.storyboard in Resources */,
+				BAB6422B2175099500993E22 /* Assets.xcassets in Resources */,
+				BAB642262175099300993E22 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAB642322175099500993E22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA45570F219223C500C6085B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA7C22BF21A1ABF300B00696 /* ShowsImageStorage.swift in Sources */,
+				BA7C22BD21A1AB0C00B00696 /* ImageFileStorage.swift in Sources */,
+				BA8DD53021A021EA009FBF83 /* DataAccessController.swift in Sources */,
+				BA6DD4CB21CE698C00977524 /* NewsArchiveWebScraper.swift in Sources */,
+				BA041CCE219CC99D000A5687 /* ShowsWebScraper.swift in Sources */,
+				BA7C22BB21A1989200B00696 /* NewsImageStorage.swift in Sources */,
+				BAB2B2D221C99BC500CBA5CC /* ShowVideoWebScraper.swift in Sources */,
+				BA15E5D221A89CCE00CDAD36 /* ShowVideoItem.swift in Sources */,
+				BA45572321922CEE00C6085B /* WebScraper.swift in Sources */,
+				BA8DD53C21A0BF2C009FBF83 /* LocalFileStorage.swift in Sources */,
+				BAB2B2D021C9810F00CBA5CC /* ShowVideoImageStorage.swift in Sources */,
+				BAC339A621B9BC4A007F6667 /* StringExtension.swift in Sources */,
+				BA8DD53921A0B92D009FBF83 /* ShowItemMO.swift in Sources */,
+				BA45572021922CE400C6085B /* NewsDetailWebScraper.swift in Sources */,
+				BA45572421922D0300C6085B /* HLSVideoPlayerHelper.swift in Sources */,
+				BA45571F219223D900C6085B /* Settings.swift in Sources */,
+				BA45572121922CE700C6085B /* NewsVideoUrlWebScraper.swift in Sources */,
+				BA45572621922D4000C6085B /* NewsItem.swift in Sources */,
+				BA8DD53521A0B55D009FBF83 /* NewsItemMO.swift in Sources */,
+				BA4557272192302B00C6085B /* HTMLParserLite.swift in Sources */,
+				BA4557282192302F00C6085B /* HTMLElem.swift in Sources */,
+				BAA4D9E221AB0011008F00F8 /* Rustavi2DataController.swift in Sources */,
+				BA8DD53721A0B8FE009FBF83 /* NewsDetailMO.swift in Sources */,
+				BA041CD2219CCDF3000A5687 /* HTMLParserUtility.swift in Sources */,
+				BA041CD0219CCB71000A5687 /* ShowItem.swift in Sources */,
+				BA0B228A219F5BA800BA3565 /* Rustavi2Data.xcdatamodeld in Sources */,
+				BA6A0DBC21D7FA9200FE47EB /* UIImageExtension.swift in Sources */,
+				BA05615421ADDB4A00FE398F /* DateExtension.swift in Sources */,
+				BAB2B2D421C99C4E00CBA5CC /* ShowVideoInfo.swift in Sources */,
+				BA15E5D021A89BCE00CDAD36 /* ShowDetailWebScraper.swift in Sources */,
+				BA45572221922CEB00C6085B /* NewsWebScraper.swift in Sources */,
+				BA45572521922D0700C6085B /* NewsDetail.swift in Sources */,
+				BA15E5D421A89D7800CDAD36 /* ShowDetail.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA5E1BEC21937F1200C40101 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA5E1BF521937F1300C40101 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAB642192175099300993E22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA041CCC219CB4C2000A5687 /* ShowsCollectionViewController.swift in Sources */,
+				BA9527FA21C05D6800B27D52 /* ShowVideoSectionTableCell.swift in Sources */,
+				BAA42808219E063000EAD9A7 /* ShowCollectionViewCell.swift in Sources */,
+				BAF0D91721C6E15300EC0481 /* ShowMainVideoTableCell.swift in Sources */,
+				BA9527F821C05CC200B27D52 /* ShowVideoSectionCell.swift in Sources */,
+				BAF0D91421C6DA2200EC0481 /* ShowTableViewController.swift in Sources */,
+				BAC3C89821C84EB80042889B /* ShowVideosColectionView.swift in Sources */,
+				BAB6C5AA2183B8EC00CC7D46 /* NewsDetailViewController.swift in Sources */,
+				BA499594217E674900978748 /* NewsItemTableViewCell.swift in Sources */,
+				BA499592217E601000978748 /* NewsTableViewController.swift in Sources */,
+				BA7E9B0421E28B4A002FCFE2 /* CollectionViewCellUpdater.swift in Sources */,
+				BA02AFFF21CFBEBE0039CBFF /* NewsTableViewDataSource.swift in Sources */,
+				BAB642212175099300993E22 /* AppDelegate.swift in Sources */,
+				BAF44CBF2198538700FF62A4 /* StretchyLayoutViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAB642302175099500993E22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB15AE621B4235500ECB45B /* HTMLParserUtilityTests.swift in Sources */,
+				BAD7D9C2217930B000D93F74 /* HTMLParserLiteTests.swift in Sources */,
+				BA05615621ADDE3700FE398F /* DateExtensionTests.swift in Sources */,
+				BAC339A821B9C04B007F6667 /* StringExtensionTests.swift in Sources */,
+				BAB642392175099500993E22 /* Rustavi2TvTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA455719219223C500C6085B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA455712219223C500C6085B /* Rustavi2TvShared */;
+			targetProxy = BA455718219223C500C6085B /* PBXContainerItemProxy */;
+		};
+		BA5E1BFB21937F1300C40101 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA5E1BEF21937F1200C40101 /* Rustavi2TvWidget */;
+			targetProxy = BA5E1BFA21937F1300C40101 /* PBXContainerItemProxy */;
+		};
+		BAB642362175099500993E22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAB6421C2175099300993E22 /* Rustavi2Tv */;
+			targetProxy = BAB642352175099500993E22 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA5E1BF621937F1300C40101 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA5E1BF721937F1300C40101 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		BAB642242175099300993E22 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAB642252175099300993E22 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAB6422C2175099500993E22 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAB6422D2175099500993E22 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA45571D219223C500C6085B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MBHV4A2H6X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Rustavi2TvShared/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zqrtalent.Rustavi2TvShared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BA45571E219223C500C6085B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MBHV4A2H6X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Rustavi2TvShared/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zqrtalent.Rustavi2TvShared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BA5E1BFD21937F1300C40101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Rustavi2TvWidget/Rustavi2TvWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBHV4A2H6X;
+				INFOPLIST_FILE = Rustavi2TvWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zqrtalent.Rustavi2Tv.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA5E1BFE21937F1300C40101 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Rustavi2TvWidget/Rustavi2TvWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBHV4A2H6X;
+				INFOPLIST_FILE = Rustavi2TvWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zqrtalent.Rustavi2Tv.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BAB6423B2175099500993E22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAB6423C2175099500993E22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAB6423E2175099500993E22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Rustavi2Tv/Rustavi2Tv.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBHV4A2H6X;
+				HEADER_SEARCH_PATHS = (
+					WebScrappers,
+					Model,
+				);
+				INFOPLIST_FILE = Rustavi2Tv/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zqrtalent.Rustavi2Tv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAB6423F2175099500993E22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Rustavi2Tv/Rustavi2Tv.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBHV4A2H6X;
+				HEADER_SEARCH_PATHS = (
+					WebScrappers,
+					Model,
+				);
+				INFOPLIST_FILE = Rustavi2Tv/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zqrtalent.Rustavi2Tv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BAB642412175099500993E22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBHV4A2H6X;
+				INFOPLIST_FILE = Rustavi2TvTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zqrtalent.Rustavi2TvTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rustavi2Tv.app/Rustavi2Tv";
+			};
+			name = Debug;
+		};
+		BAB642422175099500993E22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBHV4A2H6X;
+				INFOPLIST_FILE = Rustavi2TvTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zqrtalent.Rustavi2TvTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rustavi2Tv.app/Rustavi2Tv";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA45571C219223C500C6085B /* Build configuration list for PBXNativeTarget "Rustavi2TvShared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA45571D219223C500C6085B /* Debug */,
+				BA45571E219223C500C6085B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA5E1BFF21937F1300C40101 /* Build configuration list for PBXNativeTarget "Rustavi2TvWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA5E1BFD21937F1300C40101 /* Debug */,
+				BA5E1BFE21937F1300C40101 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAB642182175099300993E22 /* Build configuration list for PBXProject "Rustavi2Tv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAB6423B2175099500993E22 /* Debug */,
+				BAB6423C2175099500993E22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAB6423D2175099500993E22 /* Build configuration list for PBXNativeTarget "Rustavi2Tv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAB6423E2175099500993E22 /* Debug */,
+				BAB6423F2175099500993E22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAB642402175099500993E22 /* Build configuration list for PBXNativeTarget "Rustavi2TvTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAB642412175099500993E22 /* Debug */,
+				BAB642422175099500993E22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BA0B2288219F5BA800BA3565 /* Rustavi2Data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BA0B2289219F5BA800BA3565 /* Rustavi2Data.xcdatamodel */,
+			);
+			currentVersion = BA0B2289219F5BA800BA3565 /* Rustavi2Data.xcdatamodel */;
+			path = Rustavi2Data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BAB642152175099300993E22 /* Project object */;
+}
