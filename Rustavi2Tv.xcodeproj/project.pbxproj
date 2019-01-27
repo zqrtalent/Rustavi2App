@@ -31,6 +31,8 @@
 		BA45572621922D4000C6085B /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4557052192209400C6085B /* NewsItem.swift */; };
 		BA4557272192302B00C6085B /* HTMLParserLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4556F72192204600C6085B /* HTMLParserLite.swift */; };
 		BA4557282192302F00C6085B /* HTMLElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4556F82192204600C6085B /* HTMLElem.swift */; };
+		BA461A4221FE03F900FD42D2 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA461A4121FE03F900FD42D2 /* AppSettings.swift */; };
+		BA461A4421FE0F9400FD42D2 /* AppDelegate+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA461A4321FE0F9400FD42D2 /* AppDelegate+AppSettings.swift */; };
 		BA499592217E601000978748 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA499591217E601000978748 /* NewsTableViewController.swift */; };
 		BA499594217E674900978748 /* NewsItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA499593217E674900978748 /* NewsItemTableViewCell.swift */; };
 		BA5E1BF521937F1300C40101 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5E1BF421937F1300C40101 /* TodayViewController.swift */; };
@@ -150,6 +152,8 @@
 		BA455713219223C500C6085B /* Rustavi2TvShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rustavi2TvShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA455715219223C500C6085B /* Rustavi2TvShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rustavi2TvShared.h; sourceTree = "<group>"; };
 		BA455716219223C500C6085B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA461A4121FE03F900FD42D2 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		BA461A4321FE0F9400FD42D2 /* AppDelegate+AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+AppSettings.swift"; sourceTree = "<group>"; };
 		BA499591217E601000978748 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		BA499593217E674900978748 /* NewsItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemTableViewCell.swift; sourceTree = "<group>"; };
 		BA5E1BF021937F1200C40101 /* Rustavi2TvWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Rustavi2TvWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +318,7 @@
 				BADF05ED2185F1F300031E78 /* Settings.swift */,
 				BA455715219223C500C6085B /* Rustavi2TvShared.h */,
 				BA455716219223C500C6085B /* Info.plist */,
+				BA461A4121FE03F900FD42D2 /* AppSettings.swift */,
 			);
 			path = Rustavi2TvShared;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				BAB6422A2175099500993E22 /* Assets.xcassets */,
 				BAB6422C2175099500993E22 /* LaunchScreen.storyboard */,
 				BAB6422F2175099500993E22 /* Info.plist */,
+				BA461A4321FE0F9400FD42D2 /* AppDelegate+AppSettings.swift */,
 			);
 			path = Rustavi2Tv;
 			sourceTree = "<group>";
@@ -654,6 +660,7 @@
 				BA45572021922CE400C6085B /* NewsDetailWebScraper.swift in Sources */,
 				BA45572421922D0300C6085B /* HLSVideoPlayerHelper.swift in Sources */,
 				BA45571F219223D900C6085B /* Settings.swift in Sources */,
+				BA461A4221FE03F900FD42D2 /* AppSettings.swift in Sources */,
 				BA45572121922CE700C6085B /* NewsVideoUrlWebScraper.swift in Sources */,
 				BA45572621922D4000C6085B /* NewsItem.swift in Sources */,
 				BA8DD53521A0B55D009FBF83 /* NewsItemMO.swift in Sources */,
@@ -698,6 +705,7 @@
 				BA499592217E601000978748 /* NewsTableViewController.swift in Sources */,
 				BA7E9B0421E28B4A002FCFE2 /* CollectionViewCellUpdater.swift in Sources */,
 				BA02AFFF21CFBEBE0039CBFF /* NewsTableViewDataSource.swift in Sources */,
+				BA461A4421FE0F9400FD42D2 /* AppDelegate+AppSettings.swift in Sources */,
 				BAB642212175099300993E22 /* AppDelegate.swift in Sources */,
 				BAF44CBF2198538700FF62A4 /* StretchyLayoutViewController.swift in Sources */,
 			);
