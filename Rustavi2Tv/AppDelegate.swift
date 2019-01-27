@@ -51,43 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         completionHandler(.noData)
     }
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        let appId = options[.sourceApplication] as! String
-        print("opening from app: \(appId)")
-        
-        if let scheme = url.scheme{
-            // widgetapp
-            if(scheme.compare(Settings.widgetUrlScheme) == .orderedSame){
-                let action = url.host ?? ""
-                switch (action) {
-                case Settings.widgetAction_LiveVideo:
-                    print("open live video")
-                    self.openLiveVideo()
-                    break;
-                    
-                case Settings.widgetAction_NewsDetail:
-                    let newsId = url.pathComponents.last ?? ""
-                    print("open news detail: \(newsId)")
-                    self.openNewsDetail(newsId: newsId)
-                    break;
-                    
-                default:
-                    break;
-                }
-            }
-        }
-        
-        return true
-    }
-    
-    func openLiveVideo(){
-        HLSVideoPlayerHelper.playVideo(url: Settings.liveStreamUrl, viewCtrl: window?.rootViewController ?? nil)
-    }
-    
-    func openNewsDetail(newsId:String){
-        NewsDetailViewController.initialize(newsId: newsId)
-    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

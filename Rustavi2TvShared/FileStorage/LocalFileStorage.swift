@@ -9,7 +9,6 @@
 import os
 import Foundation
 
-
 public class LocalFileStorage : NSObject {
     
     init(storeDirectoryName:String) {
@@ -57,4 +56,51 @@ public class LocalFileStorage : NSObject {
         return fileManager.contents(atPath:fileUrl.path)
     }
     
+    public func deleteFilesWithName(except:[String]) -> Int{
+        guard except.count > 0 else {
+            return 0
+        }
+        
+        guard let files = self.enumerateFiles() else{
+            return 0
+        }
+        
+        let set = Set(except)
+        let deleteNames = files.filter { (s) -> Bool in !set.contains(s)}
+        return self.deleteFiles(fileNames: deleteNames)
+    }
+    
+    public func deleteFiles(fileNames:[String]) -> Int{
+        guard let storeUrl = storeDirectoryUrl else{
+            return 0
+        }
+        
+        var deletedCt = 0
+        for name in fileNames {
+            do{
+                try fileManager.removeItem(at: storeUrl.appendingPathComponent(name))
+                deletedCt += 1
+            }
+            catch{
+                // TODO: log error
+            }
+        }
+        return deletedCt
+    }
+    
+    public func enumerateFiles() -> [String]?{
+        guard let storeUrl = storeDirectoryUrl else{
+            return nil
+        }
+        
+        var fileNames:[String]? = nil
+        do {
+            let contents = try fileManager.contentsOfDirectory(at: storeUrl, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+            fileNames = contents.map({url -> String in url.lastPathComponent })
+        }
+        catch{
+        }
+        
+        return fileNames
+    }
 }

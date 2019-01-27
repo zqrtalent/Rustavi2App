@@ -33,6 +33,8 @@
 		BA4557282192302F00C6085B /* HTMLElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4556F82192204600C6085B /* HTMLElem.swift */; };
 		BA461A4221FE03F900FD42D2 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA461A4121FE03F900FD42D2 /* AppSettings.swift */; };
 		BA461A4421FE0F9400FD42D2 /* AppDelegate+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA461A4321FE0F9400FD42D2 /* AppDelegate+AppSettings.swift */; };
+		BA461A4621FE142B00FD42D2 /* AppDelegate+OpenUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA461A4521FE142B00FD42D2 /* AppDelegate+OpenUrl.swift */; };
+		BA461A4921FE20B200FD42D2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA461A4821FE20B200FD42D2 /* Log.swift */; };
 		BA499592217E601000978748 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA499591217E601000978748 /* NewsTableViewController.swift */; };
 		BA499594217E674900978748 /* NewsItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA499593217E674900978748 /* NewsItemTableViewCell.swift */; };
 		BA5E1BF521937F1300C40101 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5E1BF421937F1300C40101 /* TodayViewController.swift */; };
@@ -154,6 +156,8 @@
 		BA455716219223C500C6085B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA461A4121FE03F900FD42D2 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		BA461A4321FE0F9400FD42D2 /* AppDelegate+AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+AppSettings.swift"; sourceTree = "<group>"; };
+		BA461A4521FE142B00FD42D2 /* AppDelegate+OpenUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+OpenUrl.swift"; sourceTree = "<group>"; };
+		BA461A4821FE20B200FD42D2 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		BA499591217E601000978748 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		BA499593217E674900978748 /* NewsItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemTableViewCell.swift; sourceTree = "<group>"; };
 		BA5E1BF021937F1200C40101 /* Rustavi2TvWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Rustavi2TvWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,6 +313,7 @@
 		BA455714219223C500C6085B /* Rustavi2TvShared */ = {
 			isa = PBXGroup;
 			children = (
+				BA461A4721FE1FAC00FD42D2 /* Log */,
 				BAC339A421B9BC2D007F6667 /* Extensions */,
 				BA8DD53A21A0BEF9009FBF83 /* FileStorage */,
 				BA0B2287219F506700BA3565 /* DataAccess */,
@@ -321,6 +326,14 @@
 				BA461A4121FE03F900FD42D2 /* AppSettings.swift */,
 			);
 			path = Rustavi2TvShared;
+			sourceTree = "<group>";
+		};
+		BA461A4721FE1FAC00FD42D2 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				BA461A4821FE20B200FD42D2 /* Log.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 		BA5E1BF321937F1300C40101 /* Rustavi2TvWidget */ = {
@@ -418,6 +431,7 @@
 				BAB6422C2175099500993E22 /* LaunchScreen.storyboard */,
 				BAB6422F2175099500993E22 /* Info.plist */,
 				BA461A4321FE0F9400FD42D2 /* AppDelegate+AppSettings.swift */,
+				BA461A4521FE142B00FD42D2 /* AppDelegate+OpenUrl.swift */,
 			);
 			path = Rustavi2Tv;
 			sourceTree = "<group>";
@@ -666,6 +680,7 @@
 				BA8DD53521A0B55D009FBF83 /* NewsItemMO.swift in Sources */,
 				BA4557272192302B00C6085B /* HTMLParserLite.swift in Sources */,
 				BA4557282192302F00C6085B /* HTMLElem.swift in Sources */,
+				BA461A4921FE20B200FD42D2 /* Log.swift in Sources */,
 				BAA4D9E221AB0011008F00F8 /* Rustavi2DataController.swift in Sources */,
 				BA8DD53721A0B8FE009FBF83 /* NewsDetailMO.swift in Sources */,
 				BA041CD2219CCDF3000A5687 /* HTMLParserUtility.swift in Sources */,
@@ -693,6 +708,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA461A4621FE142B00FD42D2 /* AppDelegate+OpenUrl.swift in Sources */,
 				BA041CCC219CB4C2000A5687 /* ShowsCollectionViewController.swift in Sources */,
 				BA9527FA21C05D6800B27D52 /* ShowVideoSectionTableCell.swift in Sources */,
 				BAA42808219E063000EAD9A7 /* ShowCollectionViewCell.swift in Sources */,

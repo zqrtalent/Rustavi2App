@@ -61,6 +61,13 @@ class NewsTableViewController: UITableViewController {
                 
                 self.isLoading = false
                 self.tableView?.reloadData()
+                
+                // Delete cover images except for ones we care.
+                if let itemIds = newsItems?.map({ (item) -> String in item.id}){
+                    let deletedCoverImages = self.imageStorage.deleteNewsImageFilesWithId(except: itemIds)
+                    print("\(deletedCoverImages) news (Cover small, large etc) images have been deleted!")
+                }
+                
                 self.refreshCtrl.endRefreshing()
             }
         }

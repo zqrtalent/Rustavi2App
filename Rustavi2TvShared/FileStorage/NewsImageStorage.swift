@@ -29,6 +29,31 @@ public class NewsImageStorage : ImageFileStorage {
     
     private let imageLoadingQueue = DispatchQueue(label: "queue-news-images-loader") // Serial
     
+    public func deleteNewsImageFilesWithId(except:[String]) -> Int{
+        guard except.count > 0 else {
+            return 0
+        }
+        let exceptSmNames = except.map { (s) -> String in "sm-\(s)"}
+        let exceptLgNames = except.map { (s) -> String in "lg-\(s)"}
+        return self.deleteFilesWithName(except: exceptSmNames + exceptLgNames)
+    }
+    
+    public func deleteCoverImageFilesWithId(except:[String]) -> Int{
+        guard except.count > 0 else {
+            return 0
+        }
+        let exceptNames = except.map { (s) -> String in "sm-\(s)"}
+        return self.deleteFilesWithName(except: exceptNames)
+    }
+    
+    public func deleteDetailCoverImageFilesWithId(except:[String]) -> Int{
+        guard except.count > 0 else {
+            return 0
+        }
+        let exceptNames = except.map { (s) -> String in "lg-\(s)"}
+        return self.deleteFilesWithName(except: exceptNames)
+    }
+    
     public func readCoverImage(withId id:String, imageUrl:URL?, completionClosure: @escaping (UIImage?) -> ()){
         let fileName = "sm-\(id)"
         readImage(withName: fileName, imageUrl: imageUrl, usingQueue: self.imageLoadingQueue, processDownloadedImageHandler: nil, completionClosure: completionClosure)
