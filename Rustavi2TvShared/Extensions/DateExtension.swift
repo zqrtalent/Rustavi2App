@@ -10,7 +10,7 @@ import Foundation
 
 extension Date {
     
-    public static func fromNewsTimeString(_ timeString:String?, formatString:String?) -> Date?{
+    public static func fromTimeString(_ timeString:String?, formatString:String?) -> Date?{
         guard let tm = timeString else {
             return nil
         }

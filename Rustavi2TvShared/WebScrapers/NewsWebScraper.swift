@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class NewsWebScraper : WebScraper {
+public class NewsWebScraper : HttpClient {
     
     public override init() {
         super.init()
@@ -20,7 +20,7 @@ public class NewsWebScraper : WebScraper {
         receivedData = Data()
         completionBlock = completion
         
-        let success = httpGet(Settings.urlNews)
+        let success = GetHtml(Settings.urlNews)
         if(!success){
             completionBlock?(nil, "Failed get http page: \(Settings.urlNews)")
         }
@@ -85,7 +85,7 @@ public class NewsWebScraper : WebScraper {
                                     }
                                 }
                                 
-                                let tm = Date.fromNewsTimeString(time, formatString: nil)
+                                let tm = Date.fromTimeString(time, formatString: nil)
                                 items?.append(NewsItem(id: newsId, title: title ?? "", time: tm, coverImageUrl: coverImageUrl, videoUrl: nil))
                             }
                         }

@@ -16,7 +16,7 @@ import Foundation
  }
  */
 
-public class NewsVideoUrlWebScraper: WebScraper {
+public class NewsVideoUrlWebScraper: HttpClient {
     
     public override init() {
         super.init()
@@ -28,7 +28,7 @@ public class NewsVideoUrlWebScraper: WebScraper {
         receivedData = Data()
         completionBlock = completion
         let videoFrameUrlEncoded = videoFrameUrl.replacingOccurrences(of: " ", with: "%20")
-        let success = httpGet(videoFrameUrlEncoded)
+        let success = GetHtml(videoFrameUrlEncoded)
         if(!success){
             completionBlock?(nil, "Failed get http page: \(videoFrameUrlEncoded)")
         }

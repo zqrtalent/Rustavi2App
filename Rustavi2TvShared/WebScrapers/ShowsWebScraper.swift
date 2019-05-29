@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ShowsWebScraper : WebScraper {
+public class ShowsWebScraper : HttpClient {
     
     public override init() {
         super.init()
@@ -20,7 +20,7 @@ public class ShowsWebScraper : WebScraper {
         receivedData = Data()
         completionBlock = completion
         
-        let success = httpGet(Settings.urlShows)
+        let success = GetHtml(Settings.urlShows)
         if(!success){
             completionBlock?(nil, "Failed get http page: \(Settings.urlShows)")
         }

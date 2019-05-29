@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class NewsArchiveWebScraper : WebScraper {
+public class NewsArchiveWebScraper : HttpClient {
     
     public override init() {
         super.init()
@@ -23,7 +23,7 @@ public class NewsArchiveWebScraper : WebScraper {
         self.pageNum = pageNum
         
         let newsPageUrl = "\(Settings.urlNewsArchivePaged)\(pageNum)"
-        let success = httpGet(newsPageUrl)
+        let success = GetHtml(newsPageUrl)
         if(!success){
             completionBlock?(pageNum, nil, "Failed get http page: \(newsPageUrl)")
         }
@@ -107,7 +107,7 @@ public class NewsArchiveWebScraper : WebScraper {
                                     let newsId = HTMLParserUtility.extractLastParamOfUrl(url: pageUrl)
                                     let coverImageUrl = "\(Settings.urlNewsPhotos)/\(newsId)_video.jpg"
                                     
-                                    let tm = Date.fromNewsTimeString(time, formatString: "dd-MM-yyyy HH:mm")
+                                    let tm = Date.fromTimeString(time, formatString: "dd-MM-yyyy HH:mm")
                                     items?.append(NewsItem(id: newsId, title: title ?? "", time: tm, coverImageUrl: coverImageUrl, videoUrl: nil))
                                 }
                             }

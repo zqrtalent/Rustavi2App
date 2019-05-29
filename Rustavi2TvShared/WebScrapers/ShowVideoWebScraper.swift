@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class ShowVideoWebScraper: WebScraper {
+public class ShowVideoWebScraper: HttpClient {
     
     public override init() {
         super.init()

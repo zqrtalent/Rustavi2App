@@ -18,6 +18,7 @@ public class Settings {
     public static let widgetAction_NewsDetail: String = "newsdetail"
     
     public static let liveStreamUrl: String = "http://md-store4.tulix.tv/rustavi2/index.m3u8"
+    
     public static let websiteUrl: String = "http://www.rustavi2.ge"
     public static let urlNews: String = "http://www.rustavi2.ge/ka"
     public static let urlNewsDetail: String = "http://www.rustavi2.ge/ka/news"
@@ -26,4 +27,11 @@ public class Settings {
     
     public static let urlShows: String = "http://www.rustavi2.ge/ka/shows"
     public static let urlShowVideosXHR: String = "http://rustavi2.ge/includes/shows_sub_ajax.php"
+    
+    
+    public static let apiLatestNews: String = "https://rustavi2webapi.herokuapp.com/api/v1/news/latest"
+    public static let apiNewsDetails: String = "https://rustavi2webapi.herokuapp.com/api/v1/news/{id}"
+    public static let apiShows: String = "https://rustavi2webapi.herokuapp.com/api/v1/shows"
+    public static let apiShowDetails: String = "https://rustavi2webapi.herokuapp.com/api/v1/shows/{id}"
+    
 }

@@ -23,13 +23,13 @@ class DateExtensionTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        let dt1 = Date.fromNewsTimeString("23:45", formatString: nil)
+        let dt1 = Date.fromTimeString("23:45", formatString: nil)
         XCTAssert(dt1 != nil)
         
-        let dt2 = Date.fromNewsTimeString("02:03", formatString: nil)
+        let dt2 = Date.fromTimeString("02:03", formatString: nil)
         XCTAssert(dt2 != nil)
         
-        let dt3 = Date.fromNewsTimeString("2018-11-27 23:45", formatString: nil)
+        let dt3 = Date.fromTimeString("2018-11-27 23:45", formatString: nil)
         XCTAssert(dt3 != nil)
     }
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class NewsDetailWebScraper: WebScraper {
+public class NewsDetailWebScraper: HttpClient {
     
     public override init() {
         super.init()
@@ -23,7 +23,7 @@ public class NewsDetailWebScraper: WebScraper {
         _newsId = newsId
         
         let httpUrl = "\(Settings.urlNewsDetail)/\(newsId)"
-        let success = httpGet(httpUrl)
+        let success = GetHtml(httpUrl)
         if(!success){
             completionBlock?(nil, "Failed get http page: \(httpUrl)")
         }
@@ -106,7 +106,7 @@ public class NewsDetailWebScraper: WebScraper {
                     if let elem = HTMLParserLite.parse(html: htmlContent, startIdx: r.lowerBound){
                         let storyDetail = elem.innerHTML(originalHtml: htmlContent)
                         
-                        newsDetail = NewsDetail(id: _newsId ?? "", coverImageUrl: "\(Settings.urlNewsPhotos)/\(_newsId ?? "")_video.jpg", storyDetail: storyDetail, videoFrameUrl: videoFrameUrl, title: title, time: Date.fromNewsTimeString(time, formatString: nil))
+                        newsDetail = NewsDetail(id: _newsId ?? "", coverImageUrl: "\(Settings.urlNewsPhotos)/\(_newsId ?? "")_video.jpg", storyDetail: storyDetail, videoFrameUrl: videoFrameUrl, title: title, time: Date.fromTimeString(time, formatString: nil))
                     }
                 }
             }
