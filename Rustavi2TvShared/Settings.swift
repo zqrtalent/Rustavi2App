@@ -28,6 +28,7 @@ public class Settings {
     public static let urlShows: String = "http://www.rustavi2.ge/ka/shows"
     public static let urlShowVideosXHR: String = "http://rustavi2.ge/includes/shows_sub_ajax.php"
     
+    public static let liveStreamUrl_prod: String = "https://rustavi2-reverse-proxy.herokuapp.com/xyz_live_stream/rustavi2/index.m3u8"
     
     public static let apiLatestNews: String = "https://rustavi2webapi.herokuapp.com/api/v1/news/latest"
     public static let apiNewsDetails: String = "https://rustavi2webapi.herokuapp.com/api/v1/news/{id}"

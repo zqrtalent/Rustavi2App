@@ -43,7 +43,7 @@ class NewsTableViewController: UITableViewController {
     
     @objc func onLiveVideo(sender: UIBarButtonItem){
         print("Live video")
-        HLSVideoPlayerHelper.playVideo(url: Settings.liveStreamUrl, viewCtrl: self)
+        HLSVideoPlayerHelper.playVideo(url: Settings.liveStreamUrl_prod, viewCtrl: self)
     }
     
     private func loadNews(_ pageNum:UInt){
