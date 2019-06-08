@@ -21,9 +21,9 @@ class ShowVideoSectionTableCell : UITableViewCell {
         // Code here
     }
     
-    public func updateVideos(showName:String, showVideos:[ShowVideoItem]?){
+    public func updateVideos(showId:String, showVideos:[ShowVideoItem]?){
         if videos.delegate == nil {
-            videosDataSource = ShowVideosCollectionDataSource(showName:showName, showVideos: showVideos)
+            videosDataSource = ShowVideosCollectionDataSource(showId: showId, showVideos: showVideos)
             videos.dataSource = videosDataSource
         }
         else{

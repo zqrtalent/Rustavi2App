@@ -35,4 +35,7 @@ public class Settings {
     public static let apiShows: String = "https://rustavi2webapi.herokuapp.com/api/v1/shows"
     public static let apiShowDetails: String = "https://rustavi2webapi.herokuapp.com/api/v1/shows/{id}"
     
+    public static let apiNewsVideoDetails: String = "https://rustavi2webapi.herokuapp.com/api/v1/news/{id}/video"
+    public static let apiShowVideoDetails: String = "https://rustavi2webapi.herokuapp.com/api/v1/shows/{id}/video/{videoId}"
+    
 }

@@ -11,6 +11,10 @@ import AVKit
 
 public class HLSVideoPlayerHelper {
     
+    public static func playLiveVideo(viewCtrl: UIViewController?){
+        self.playVideo(url: Settings.liveStreamUrl_prod, viewCtrl: viewCtrl)
+    }
+    
     public static func playVideo(url:String, viewCtrl: UIViewController?){
         let videoURL = URL(fileURLWithPath: url)
         let player = AVPlayer(url: videoURL)

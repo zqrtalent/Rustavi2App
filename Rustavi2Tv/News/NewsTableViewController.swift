@@ -43,14 +43,36 @@ class NewsTableViewController: UITableViewController {
     
     @objc func onLiveVideo(sender: UIBarButtonItem){
         print("Live video")
-        HLSVideoPlayerHelper.playVideo(url: Settings.liveStreamUrl_prod, viewCtrl: self)
+        HLSVideoPlayerHelper.playLiveVideo(viewCtrl: self)
     }
     
     private func loadNews(_ pageNum:UInt){
         self.isLoading = true
         
-//        let apiClient = HttpClient()
-//        apiClient.GetJsonArray(Settings.apiLatestNews) { (newsItems:[NewsItem], errorStr:String?) in
+        let apiClient = Rustavi2WebApiClient()
+        apiClient.GetLatestNews { (newsItems:[NewsItem], errorStr:String?) in
+            DispatchQueue.main.async {
+                if let err = errorStr{
+                    print("error returned \(err)")
+                }
+                else{
+                    self.updateNewsItems(newsItems, pageNum: pageNum)
+                }
+                
+                self.isLoading = false
+                self.tableView?.reloadData()
+                
+                // Delete cover images except for ones we care.
+                let itemIds = newsItems.map({ (item) -> String in item.id})
+                let deletedCoverImages = self.imageStorage.deleteNewsImageFilesWithId(except: itemIds)
+                print("\(deletedCoverImages) news (Cover small, large etc) images have been deleted!")
+                
+                self.refreshCtrl.endRefreshing()
+            }
+        }
+        
+//        let scraperArchive = NewsArchiveWebScraper()
+//        scraperArchive.RetrieveNewsPaged(pageNum) { (pageNum, newsItems, errorStr) in
 //            DispatchQueue.main.async {
 //                if let err = errorStr{
 //                    print("error returned \(err)")
@@ -63,36 +85,14 @@ class NewsTableViewController: UITableViewController {
 //                self.tableView?.reloadData()
 //
 //                // Delete cover images except for ones we care.
-//                let itemIds = newsItems.map({ (item) -> String in item.id})
-//                let deletedCoverImages = self.imageStorage.deleteNewsImageFilesWithId(except: itemIds)
-//                print("\(deletedCoverImages) news (Cover small, large etc) images have been deleted!")
+//                if let itemIds = newsItems?.map({ (item) -> String in item.id}){
+//                    let deletedCoverImages = self.imageStorage.deleteNewsImageFilesWithId(except: itemIds)
+//                    print("\(deletedCoverImages) news (Cover small, large etc) images have been deleted!")
+//                }
 //
 //                self.refreshCtrl.endRefreshing()
 //            }
 //        }
-        
-        let scraperArchive = NewsArchiveWebScraper()
-        scraperArchive.RetrieveNewsPaged(pageNum) { (pageNum, newsItems, errorStr) in
-            DispatchQueue.main.async {
-                if let err = errorStr{
-                    print("error returned \(err)")
-                }
-                else{
-                    self.updateNewsItems(newsItems, pageNum: pageNum)
-                }
-
-                self.isLoading = false
-                self.tableView?.reloadData()
-
-                // Delete cover images except for ones we care.
-                if let itemIds = newsItems?.map({ (item) -> String in item.id}){
-                    let deletedCoverImages = self.imageStorage.deleteNewsImageFilesWithId(except: itemIds)
-                    print("\(deletedCoverImages) news (Cover small, large etc) images have been deleted!")
-                }
-
-                self.refreshCtrl.endRefreshing()
-            }
-        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

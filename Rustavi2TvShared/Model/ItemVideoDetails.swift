@@ -36,14 +36,11 @@ public class ItemVideoDetails : JsonSerializable {
         if let videoUrl = json["videoUrl"] as? String{
             self.videoUrl = videoUrl
         }
-        else{
-            self.videoUrl = ""
-        }
         
         super.init(json: json)
     }
     
     public var id: String
-    public var videoUrl: String
+    public var videoUrl: String?
     public var videoTypeId: Int
 }

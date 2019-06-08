@@ -40,6 +40,13 @@ extension String {
         return String(self[self.startIndex..<self.index(idx, offsetBy: 1)])
     }
     
+    public func urlEncode() -> String?{
+        var cs = CharacterSet.urlPathAllowed
+        cs.insert(charactersIn: ":&=?_")
+        
+        return self.addingPercentEncoding(withAllowedCharacters: cs)
+    }
+    
     public static func replace(_ replaceStr:String, search:[String], replaceWith:String) -> String{
         if(search.count == 0 || replaceStr.count == 0){
             return replaceStr

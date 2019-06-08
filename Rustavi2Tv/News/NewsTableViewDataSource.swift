@@ -51,5 +51,8 @@ extension NewsTableViewController{
             }
             self.newsItems = itemsMerged
         }
+        
+        let tabIndex = 0 // News tab index
+        self.tabBarController?.tabBar.items?[tabIndex].badgeValue = String((self.newsItems?.count ?? 0))
     }
 }

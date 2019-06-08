@@ -41,6 +41,7 @@
 		BA5E1BF821937F1300C40101 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5E1BF621937F1300C40101 /* MainInterface.storyboard */; };
 		BA5E1BFC21937F1300C40101 /* Rustavi2TvWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BA5E1BF021937F1200C40101 /* Rustavi2TvWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BA5E1C022193862D00C40101 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5E1C012193862D00C40101 /* Foundation.framework */; };
+		BA66F0F122A1BC9C003D73D4 /* Rustavi2WebApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66F0F022A1BC9C003D73D4 /* Rustavi2WebApiClient.swift */; };
 		BA6A0DBC21D7FA9200FE47EB /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6A0DBB21D7FA9200FE47EB /* UIImageExtension.swift */; };
 		BA6DD4C921CE528C00977524 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5E1BF121937F1300C40101 /* NotificationCenter.framework */; };
 		BA6DD4CB21CE698C00977524 /* NewsArchiveWebScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6DD4CA21CE698C00977524 /* NewsArchiveWebScraper.swift */; };
@@ -172,6 +173,7 @@
 		BA5E1BF721937F1300C40101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		BA5E1BF921937F1300C40101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA5E1C012193862D00C40101 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BA66F0F022A1BC9C003D73D4 /* Rustavi2WebApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rustavi2WebApiClient.swift; sourceTree = "<group>"; };
 		BA6A0DBB21D7FA9200FE47EB /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		BA6DD4CA21CE698C00977524 /* NewsArchiveWebScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArchiveWebScraper.swift; sourceTree = "<group>"; };
 		BA7C22BA21A1989200B00696 /* NewsImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsImageStorage.swift; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 			isa = PBXGroup;
 			children = (
 				BACDA6EF229B113400181846 /* WebApiDelegate.swift */,
+				BA66F0F022A1BC9C003D73D4 /* Rustavi2WebApiClient.swift */,
 			);
 			path = WebApi;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				BACDA6F0229B113400181846 /* WebApiDelegate.swift in Sources */,
 				BAB2B2D221C99BC500CBA5CC /* ShowVideoWebScraper.swift in Sources */,
 				BA15E5D221A89CCE00CDAD36 /* ShowVideoItem.swift in Sources */,
+				BA66F0F122A1BC9C003D73D4 /* Rustavi2WebApiClient.swift in Sources */,
 				BA45572321922CEE00C6085B /* HttpClient.swift in Sources */,
 				BA8DD53C21A0BF2C009FBF83 /* LocalFileStorage.swift in Sources */,
 				BACDA6F8229B35D300181846 /* HttpClient+Compression.swift in Sources */,

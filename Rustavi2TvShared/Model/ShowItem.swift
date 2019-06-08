@@ -56,7 +56,7 @@ public class ShowItem : JsonSerializable {
         super.init(json: json)
     }
     
-    public var id:String?
+    public var id:String = ""
     public var name:String
     public var desc:String?
     public var pageUrl:String?

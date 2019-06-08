@@ -94,15 +94,16 @@ class ShowsCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let item = self.showsItems?[indexPath.item]{
             if let pageUrl = item.pageUrl {
-                ShowTableViewController.initialize(showName: item.name, showPageUrl: pageUrl)
+                ShowTableViewController.initialize(id: item.id, showName: item.name, showPageUrl: pageUrl)
             }
         }
     }
     
     private func loadShows(){
         self.isLoading = true
-        let scraper = ShowsWebScraper()
-        scraper.RetrieveShows { (showsItems, errorStr) in
+        
+        let apiClient = Rustavi2WebApiClient()
+        apiClient.GetShows() { (showsItems:[ShowItem], errorStr:String?) in
             DispatchQueue.main.async {
                 if let err = errorStr{
                     print("error returned \(err)")
@@ -117,6 +118,23 @@ class ShowsCollectionViewController: UICollectionViewController {
                 }
             }
         }
+        
+//        let scraper = ShowsWebScraper()
+//        scraper.RetrieveShows { (showsItems, errorStr) in
+//            DispatchQueue.main.async {
+//                if let err = errorStr{
+//                    print("error returned \(err)")
+//                    self.isLoading = false
+//                    self.refreshCtrl.endRefreshing()
+//                }
+//                else{
+//                    self.updateShows(showsItems)
+//                    self.isLoading = false
+//                    self.collectionView?.reloadData()
+//                    self.refreshCtrl.endRefreshing()
+//                }
+//            }
+//        }
     }
     
     private func updateShows(_ items:[ShowItem]!){
@@ -146,5 +164,8 @@ class ShowsCollectionViewController: UICollectionViewController {
 
             self.showsItems = itemsMerged
         }
+        
+        let tabIndex = 1 // Shows tab index
+        self.tabBarController?.tabBar.items?[tabIndex].badgeValue = String((self.showsItems?.count ?? 0))
     }
 }

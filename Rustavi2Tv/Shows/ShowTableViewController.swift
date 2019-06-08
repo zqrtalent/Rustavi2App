@@ -16,6 +16,7 @@ class ShowTableViewController: UITableViewController {
     private var imageStorage:ShowVideosImageStorage?
     
     private var showPageUrl: String?
+    private var showId: String?
     private var showName: String?
     private var mainVideoUrl: String?
     
@@ -30,11 +31,12 @@ class ShowTableViewController: UITableViewController {
         self.loadShowDetails()
     }
     
-    public static func initialize(showName:String, showPageUrl:String){
+    public static func initialize(id: String, showName:String, showPageUrl:String){
         let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
         let viewCtrl = sb.instantiateViewController(withIdentifier: "showTableViewId") as! ShowTableViewController
         viewCtrl.showPageUrl = showPageUrl
         viewCtrl.showName = showName
+        viewCtrl.showId = id;
         
         let tabBarCtrl = AppDelegate.rootViewCtrl as! UITabBarController?
         if let currViewCtrl = tabBarCtrl?.selectedViewController{
@@ -62,9 +64,13 @@ class ShowTableViewController: UITableViewController {
     }
     
     private func loadShowDetails(){
+        guard let showId = self.showId else{
+            return;
+        }
+        
         self.isLoading = true
-        let scraper = ShowDetailWebScraper()
-        scraper.RetrieveShowDetails(showName: self.showName ?? "", showPageUrl: self.showPageUrl!) { (details, errorStr) in
+        let apiClient = Rustavi2WebApiClient()
+        apiClient.GetShowDetails(showId) { (details:ShowDetail, errorStr:String?) in
             DispatchQueue.main.async {
                 if let err = errorStr{
                     print("error returned \(err)")
@@ -79,6 +85,23 @@ class ShowTableViewController: UITableViewController {
                 }
             }
         }
+        
+//        let scraper = ShowDetailWebScraper()
+//        scraper.RetrieveShowDetails(showName: self.showName ?? "", showPageUrl: self.showPageUrl!) { (details, errorStr) in
+//            DispatchQueue.main.async {
+//                if let err = errorStr{
+//                    print("error returned \(err)")
+//                    self.isLoading = false
+//                    self.refreshCtrl.endRefreshing()
+//                }
+//                else{
+//                    self.updateShowDetail(details)
+//                    self.isLoading = false
+//                    self.tableView?.reloadData()
+//                    self.refreshCtrl.endRefreshing()
+//                }
+//            }
+//        }
     }
     
     private func updateShowDetail(_ details:ShowDetail?){
@@ -147,7 +170,7 @@ class ShowTableViewController: UITableViewController {
             if let videoItemsBySection = self.details?.videoItemsBySection ?? nil{
                 let elem = videoItemsBySection[videoItemsBySection.index(videoItemsBySection.startIndex, offsetBy: indexPath.row)]
                 cell.title.text = elem.key
-                cell.updateVideos(showName: self.details?.name ?? "", showVideos: elem.value)
+                cell.updateVideos(showId: self.showId ?? "", showVideos: elem.value)
             }
             
             return cell
@@ -159,16 +182,23 @@ class ShowTableViewController: UITableViewController {
         if let videoUrl = self.mainVideoUrl{
             HLSVideoPlayerHelper.playVideo(url: videoUrl, viewCtrl: self)
         }
-        else
-        if let mainVideoPageUrl = self.details?.mainVideo?.videoPageUrl{
-            let scraper = ShowVideoWebScraper()
-            scraper.RetrieveShowVideoInfo(mainVideoPageUrl) { (videoInfo, errorStr) in
+        else{
+            guard let showId = self.details?.id else{
+                return
+            }
+            
+            guard let videoId = self.details?.mainVideo?.id else{
+                return
+            }
+            
+            let apiClient = Rustavi2WebApiClient()
+            apiClient.GetShowVideoDetails(showId, videoId: videoId){ (videoDetails: ItemVideoDetails, errorStr:String?) in
                 DispatchQueue.main.async {
                     if let err = errorStr{
                         print("error returned \(err)")
                     }
                     else{
-                        if let videoUrl = videoInfo?.videoUrl{
+                        if let videoUrl = videoDetails.videoUrl{
                             self.mainVideoUrl = videoUrl
                             HLSVideoPlayerHelper.playVideo(url: videoUrl, viewCtrl: self)
                         }
@@ -176,5 +206,22 @@ class ShowTableViewController: UITableViewController {
                 }
             }
         }
+        
+//        if let mainVideoPageUrl = self.details?.mainVideo?.videoPageUrl{
+//            let scraper = ShowVideoWebScraper()
+//            scraper.RetrieveShowVideoInfo(mainVideoPageUrl) { (videoInfo, errorStr) in
+//                DispatchQueue.main.async {
+//                    if let err = errorStr{
+//                        print("error returned \(err)")
+//                    }
+//                    else{
+//                        if let videoUrl = videoInfo?.videoUrl{
+//                            self.mainVideoUrl = videoUrl
+//                            HLSVideoPlayerHelper.playVideo(url: videoUrl, viewCtrl: self)
+//                        }
+//                    }
+//                }
+//            }
+//        }
     }
 }

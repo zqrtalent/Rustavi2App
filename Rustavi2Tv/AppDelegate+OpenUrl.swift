@@ -22,13 +22,13 @@ extension AppDelegate{
                 switch (action) {
                 case Settings.widgetAction_LiveVideo:
                     print("open live video")
-                    self.openLiveVideo()
+                    HLSVideoPlayerHelper.playLiveVideo(viewCtrl: window?.rootViewController ?? nil)
                     break;
                     
                 case Settings.widgetAction_NewsDetail:
                     let newsId = url.pathComponents.last ?? ""
                     print("open news detail: \(newsId)")
-                    self.openNewsDetail(newsId: newsId)
+                    openNewsDetail(newsId: newsId)
                     break;
                     
                 default:
@@ -40,11 +40,7 @@ extension AppDelegate{
         return true
     }
     
-    func openLiveVideo(){
-        HLSVideoPlayerHelper.playVideo(url: Settings.liveStreamUrl, viewCtrl: window?.rootViewController ?? nil)
-    }
-    
-    func openNewsDetail(newsId:String){
+    public func openNewsDetail(newsId:String){
         NewsDetailViewController.initialize(newsId: newsId)
     }
 }

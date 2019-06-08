@@ -10,15 +10,17 @@ import UIKit
 import Rustavi2TvShared
 
 class ShowVideosCollectionDataSource: NSObject, UICollectionViewDataSource {
+    private var showId: String;
     private var showVideos: [ShowVideoItem]?
     private let imageStorage:ShowVideosImageStorage?
     private static let cellId = "defaultcell"
     
     private var updater: CollectionViewUpdater?
     
-    init(showName:String, showVideos: [ShowVideoItem]?) {
+    init(showId:String, showVideos: [ShowVideoItem]?) {
+        self.showId = showId
         self.showVideos = showVideos
-        self.imageStorage = ShowVideosImageStorage(showName: showName)
+        self.imageStorage = ShowVideosImageStorage(showName: showId)
     }
     
     deinit {
@@ -38,10 +40,10 @@ class ShowVideosCollectionDataSource: NSObject, UICollectionViewDataSource {
         cell.title.text = showVideos?[indexPath.row].title
         cell.imageView.image = showVideos?[indexPath.row].coverImage
         
-        if let videoPageUrl = self.showVideos?[indexPath.row].videoPageUrl{
-            cell.enablePlayVideoButton(videoPageUrl: videoPageUrl)
+        if let showVideo = self.showVideos?[indexPath.row]{
+            cell.enablePlayVideoButton(showId: showId, videoId: showVideo.id, videoPageUrl: showVideo.videoPageUrl ?? "")
         }
-        
+                
         if(self.updater == nil){
             self.updater = CollectionViewUpdater(view: collectionView)
         }

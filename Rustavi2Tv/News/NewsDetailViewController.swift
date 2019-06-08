@@ -45,8 +45,7 @@ class NewsDetailViewController: StretchyLayoutViewController {
     private func loadNewsDetail(){
         self.isLoading = true
         
-        let scraper = NewsDetailWebScraper()
-        scraper.RetrieveNewsDetail(self.newsId ?? "") { (detail, errorStr) in
+        let completionBlock : (NewsDetail?, String?) -> Void = {(detail, errorStr) in
             self.isLoading = false
             
             if let err = errorStr{
@@ -81,25 +80,49 @@ class NewsDetailViewController: StretchyLayoutViewController {
                 self.loadNewsVideoUrl();
             }
         }
+        
+        let apiClient = Rustavi2WebApiClient()
+        apiClient.GetNewsDetails(self.newsId ?? "", responseClosure: completionBlock)
+        
+//        let scraper = NewsDetailWebScraper()
+//        scraper.RetrieveNewsDetail(self.newsId ?? "", completion: completionBlock)
+        
     }
     
     private func loadNewsVideoUrl(){
         if(self.newsDetail?.videoUrl != nil){
-            return;
+            return
         }
         
-        if let videoFrameUrl = self.newsDetail?.videoFrameUrl {
-            let scraper = NewsVideoUrlWebScraper()
-            scraper.RetrieveNewsVideoUrl(videoFrameUrl) { (videoUrl, errorDesc) in
-                if(videoUrl != nil){
-                    self.newsDetail?.videoUrl = videoUrl
-                    
-                    DispatchQueue.main.async {
-                        // Enable play video button.
-                        self.allowPlayVideo(allowPlay: true)
-                    }
+        // replace(_ replaceStr:String, search:[String], replaceWith:String) -> String
+        guard let newsId = self.newsDetail?.id else{
+            return
+        }
+        
+        let apiClient = Rustavi2WebApiClient()
+        apiClient.GetNewsVideoDetails(newsId){ (videoDetails: ItemVideoDetails, errorStr:String?) in
+            if let videoUrl = videoDetails.videoUrl {
+                self.newsDetail?.videoUrl = videoUrl
+                
+                DispatchQueue.main.async {
+                    // Enable play video button.
+                    self.allowPlayVideo(allowPlay: true)
                 }
             }
         }
+        
+//        if let videoFrameUrl = self.newsDetail?.videoFrameUrl {
+//            let scraper = NewsVideoUrlWebScraper()
+//            scraper.RetrieveNewsVideoUrl(videoFrameUrl) { (videoUrl, errorDesc) in
+//                if(videoUrl != nil){
+//                    self.newsDetail?.videoUrl = videoUrl
+//
+//                    DispatchQueue.main.async {
+//                        // Enable play video button.
+//                        self.allowPlayVideo(allowPlay: true)
+//                    }
+//                }
+//            }
+//        }
     }
 }
