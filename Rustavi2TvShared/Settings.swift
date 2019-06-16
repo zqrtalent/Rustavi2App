@@ -28,14 +28,14 @@ public class Settings {
     public static let urlShows: String = "http://www.rustavi2.ge/ka/shows"
     public static let urlShowVideosXHR: String = "http://rustavi2.ge/includes/shows_sub_ajax.php"
     
-    public static let liveStreamUrl_prod: String = "https://rustavi2-reverse-proxy.herokuapp.com/xyz_live_stream/rustavi2/index.m3u8"
+    public static let liveStreamUrl_prod: String = "https://proxy.rustavi2.zqrtalent.dev/xyz_live_stream/rustavi2/index.m3u8"
     
-    public static let apiLatestNews: String = "https://rustavi2webapi.herokuapp.com/api/v1/news/latest"
-    public static let apiNewsDetails: String = "https://rustavi2webapi.herokuapp.com/api/v1/news/{id}"
-    public static let apiShows: String = "https://rustavi2webapi.herokuapp.com/api/v1/shows"
-    public static let apiShowDetails: String = "https://rustavi2webapi.herokuapp.com/api/v1/shows/{id}"
+    public static let apiLatestNews: String = "https://api.rustavi2.zqrtalent.dev/api/v1/news/latest"
+    public static let apiNewsDetails: String = "https://api.rustavi2.zqrtalent.dev/api/v1/news/{id}"
+    public static let apiShows: String = "https://api.rustavi2.zqrtalent.dev/api/v1/shows"
+    public static let apiShowDetails: String = "https://api.rustavi2.zqrtalent.dev/api/v1/shows/{id}"
     
-    public static let apiNewsVideoDetails: String = "https://rustavi2webapi.herokuapp.com/api/v1/news/{id}/video"
-    public static let apiShowVideoDetails: String = "https://rustavi2webapi.herokuapp.com/api/v1/shows/{id}/video/{videoId}"
+    public static let apiNewsVideoDetails: String = "https://api.rustavi2.zqrtalent.dev/api/v1/news/{id}/video"
+    public static let apiShowVideoDetails: String = "https://api.rustavi2.zqrtalent.dev/api/v1/shows/{id}/video/{videoId}"
     
 }
